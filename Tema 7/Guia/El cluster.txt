@@ -1,0 +1,10 @@
+1. Seguir los pasos del documento subido añadiendo Scoop y el repositorio a la hora de crear la cacharra
+2. Abrir los puertos si no están abiertos 
+3. ssh -i "C:\Users\Mañana\clave_Ubuntu_MySql.pem" hadoop@3.237.13.170
+4. Carpeta en users. hdfs dfs -mkdir /user/pablo
+5. Permisos de no sé qué mierdas
+	a) sudo chmod 777 /usr/lib/hadoop/etc/hadoop/hdfs-site.xml
+	b) nano /usr/lib/hadoop/etc/hadoop/hdfs-site.xml
+	c) Buscar "webhdfs" y ponerlo a true
+	d) sudo systemctl restart hadoop-hdfs-namenode
+6. scp -i "C:\Users\Mañana\clave_Ubuntu_MySql.pem" "C:\Users\Mañana\Desktop\Datasets\OnlineRetail.csv" hadoop@3.237.13.170:/home/hadoop
